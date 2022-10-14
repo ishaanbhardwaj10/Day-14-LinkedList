@@ -1,4 +1,6 @@
-﻿namespace LinkedListProblem
+﻿using System.Collections.Generic;
+
+namespace LinkedListProblem
 {
     class Program
     {
@@ -6,6 +8,7 @@
         {
             Console.WriteLine("Welcome to Linked List Problem");
             Console.WriteLine("Use case #1: Create a Simple Linked List");
+            Console.WriteLine("Use case #2: Add to LinkedList in reverse");
 
             Console.Write("Please select a program to run from options above: ");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -21,6 +24,13 @@
                     {
                         Console.WriteLine(item);
                     }
+                    break;
+                case 2:
+                    LinkedList listOne = new LinkedList();
+                    listOne.AddReverseData(70);
+                    listOne.AddReverseData(30);
+                    listOne.AddReverseData(56);
+                    listOne.Display();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid number from given options");
