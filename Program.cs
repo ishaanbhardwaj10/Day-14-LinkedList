@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace LinkedListProblem
 {
@@ -14,6 +15,7 @@ namespace LinkedListProblem
             Console.WriteLine("Use case #5: Delete first element in linkedlist");
             Console.WriteLine("Use case #6: Delete last element in linkedlist");
             Console.WriteLine("Use case #7: Find node with key 30 in linkedlist");
+            Console.WriteLine("Use case #8: Insert 40 after 30 in linkedlist");
 
             Console.Write("Please select a program to run from options above: ");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -79,6 +81,18 @@ namespace LinkedListProblem
                     listSix.AddAppend(30);
                     listSix.AddAppend(70);
                     listSix.FindNode(30);
+                    break;
+                case 8:
+                    LinkedList listSeven = new LinkedList();
+                    listSeven.AddAppend(56);
+                    listSeven.AddAppend(30);
+                    listSeven.AddAppend(70);
+                    listSeven.Display();
+                    int detectedPosition = listSeven.FindNode(30);
+                    detectedPosition++;
+                    listSeven.Insert(detectedPosition, 40);
+                    Console.WriteLine("------after insertion operation------");
+                    listSeven.Display();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid number from given options");
