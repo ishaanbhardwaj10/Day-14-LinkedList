@@ -44,6 +44,46 @@ namespace LinkedListProblem
         }
 
 
+        internal void Insert(int position, int data)
+        {
+            Node newNode = new Node(data);
+
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid position");
+            }
+            else if (position == 1)
+            {
+                Node temp = head;
+                newNode.next = temp;
+                head = newNode;
+            }
+            else
+            {
+                Node temp = head;
+                for (int i = 1; i < position - 1; i++)
+                {
+                    if (temp.next != null)
+                    {
+                        temp = temp.next;
+                    }
+                }
+
+                if (temp.next != null)
+                {
+                    newNode.next = temp.next;
+                    temp.next = newNode;
+                }
+                else
+                {
+                    Console.WriteLine("Node at (position - 1) is null");
+                }
+            }
+
+
+        }
+
+
         internal void Display()
         {
             Node temp = head;
