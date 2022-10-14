@@ -98,6 +98,34 @@ namespace LinkedListProblem
         }
 
 
+        internal void PopLast()
+        {
+            if (this.head != null)
+            {
+                if (this.head.next == null)
+                {
+                    this.head = null;
+                }
+                else
+                {
+                    Node temp = this.head;
+                    while(temp.next.next != null)
+                    {
+                        temp = temp.next;
+                    }
+                    Node lastNode = temp.next;
+                    temp.next = null;
+                    lastNode = null;
+                }
+            }
+            else
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+
+        }
+
+
         internal void Display()
         {
             Node temp = head;
