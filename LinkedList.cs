@@ -76,7 +76,7 @@ namespace LinkedListProblem
                 }
                 else
                 {
-                    Console.WriteLine("Node at (position - 1) is null");
+                    Console.WriteLine("Node at position {0} is null", position - 1);
                 }
             }
 
