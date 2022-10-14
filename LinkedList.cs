@@ -125,6 +125,22 @@ namespace LinkedListProblem
 
         }
 
+        internal int FindNode(int data)
+        {
+            int count = 1;
+            if (head != null)
+            {
+                Node temp = head;
+                while (temp.data != data)
+                {
+                    count++;
+                    temp = temp.next;
+                }
+                Console.WriteLine("\nNode with key {0} is at position: {1}", data, count);
+            }
+            return count;
+        }
+
 
         internal void Display()
         {
