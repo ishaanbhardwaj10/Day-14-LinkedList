@@ -12,6 +12,7 @@ namespace LinkedListProblem
             Console.WriteLine("Use case #3: Append to LinkedList");
             Console.WriteLine("Use case #4: Insert 30 between 56 and 70 in linkedlist");
             Console.WriteLine("Use case #5: Delete first element in linkedlist");
+            Console.WriteLine("Use case #6: Delete last element in linkedlist");
 
             Console.Write("Please select a program to run from options above: ");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -60,6 +61,16 @@ namespace LinkedListProblem
                     listFour.PopFirst();
                     Console.WriteLine("----------After popping first element----------");
                     listFour.Display();
+                    break;
+                case 6:
+                    LinkedList listFive = new LinkedList();
+                    listFive.AddAppend(56);
+                    listFive.AddAppend(30);
+                    listFive.AddAppend(70);
+                    listFive.Display();
+                    listFive.PopLast();
+                    Console.WriteLine("----------After popping first element----------");
+                    listFive.Display();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid number from given options");
