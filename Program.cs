@@ -17,6 +17,7 @@ namespace LinkedListProblem
             Console.WriteLine("Use case #7: Find node with key 30 in linkedlist");
             Console.WriteLine("Use case #8: Insert 40 after 30 in linkedlist");
             Console.WriteLine("Use case #9: Delete 40 from linkedlist and show size");
+            Console.WriteLine("Use case #10: Create ordered linked list in ascending order");
 
             Console.Write("Please select a program to run from options above: ");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -108,6 +109,14 @@ namespace LinkedListProblem
                     Console.WriteLine("------after deletion operation------");
                     listEight.Display();
                     listEight.Size();
+                    break;
+                case 10:
+                    SortedLinkedList orderedList = new SortedLinkedList();
+                    orderedList.Add(56);
+                    orderedList.Add(30);
+                    orderedList.Add(40);
+                    orderedList.Add(70);
+                    orderedList.Display();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid number from given options");
