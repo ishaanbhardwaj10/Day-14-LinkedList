@@ -142,6 +142,63 @@ namespace LinkedListProblem
         }
 
 
+        internal void DeleteAtPosition(int position)
+        {
+            if (position > 0)
+            {
+                Node temp = head;
+                if (position == 1)
+                {
+                    head = temp.next;
+                }
+                else
+                {
+                    for (int i = 1; i < position - 1; i++)
+                    {
+                        if (temp.next.next != null)
+                        {
+                            temp = temp.next;
+                        }
+                    }
+                    if (temp.next.next == null)
+                    {
+                        Console.WriteLine("\n[ERROR] Enter a valid position");
+                    }
+                    else
+                    {
+                        Node deleteNode = temp.next;
+                        temp.next = deleteNode.next;
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Enter a valid position");
+            }
+        }
+
+
+        internal void Size()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("\nLinkedList is empty");
+            }
+            else
+            {
+                Node temp = head;
+                int count = 1;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                    count++;
+                }
+                Console.WriteLine("\nSize of LinkedList is: {0}", count);
+            }
+
+        }
+
+
         internal void Display()
         {
             Node temp = head;
