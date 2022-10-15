@@ -16,6 +16,7 @@ namespace LinkedListProblem
             Console.WriteLine("Use case #6: Delete last element in linkedlist");
             Console.WriteLine("Use case #7: Find node with key 30 in linkedlist");
             Console.WriteLine("Use case #8: Insert 40 after 30 in linkedlist");
+            Console.WriteLine("Use case #9: Delete 40 from linkedlist and show size");
 
             Console.Write("Please select a program to run from options above: ");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -93,6 +94,20 @@ namespace LinkedListProblem
                     listSeven.Insert(detectedPosition, 40);
                     Console.WriteLine("------after insertion operation------");
                     listSeven.Display();
+                    break;
+                case 9:
+                    LinkedList listEight = new LinkedList();
+                    listEight.AddAppend(56);
+                    listEight.AddAppend(30);
+                    listEight.AddAppend(40);
+                    listEight.AddAppend(70);
+                    listEight.Display();
+                    listEight.Size();
+                    int nodeLocation = listEight.FindNode(40);
+                    listEight.DeleteAtPosition(nodeLocation);
+                    Console.WriteLine("------after deletion operation------");
+                    listEight.Display();
+                    listEight.Size();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid number from given options");
