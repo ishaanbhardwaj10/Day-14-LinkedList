@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedListProblem
 {
-    internal class NodeS<T> : IComparable where T : IComparable
+    internal class NodeS<T> : IComparable where T : IComparable<T>
     {
 
         public T data;
